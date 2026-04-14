@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@300;400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --background: 140 20% 97%;
+    --foreground: 200 15% 20%;
+
+    --card: 140 15% 95%;
+    --card-foreground: 200 15% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 15% 20%;
+
+    --primary: 160 30% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 200 25% 92%;
+    --secondary-foreground: 200 20% 30%;
+
+    --muted: 140 10% 93%;
+    --muted-foreground: 200 10% 50%;
+
+    --accent: 200 30% 88%;
+    --accent-foreground: 200 20% 25%;
+
+    --destructive: 0 60% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 140 15% 88%;
+    --input: 140 15% 88%;
+    --ring: 160 30% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --tea-primary: 160 35% 50%;
+    --tea-surface: 160 20% 95%;
+    --tea-border: 160 20% 85%;
+
+    --tdah-primary: 35 70% 55%;
+    --tdah-surface: 35 30% 95%;
+    --tdah-border: 35 25% 85%;
+    --tdah-accent: 200 50% 55%;
+
+    --success: 145 50% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 40 80% 55%;
+    --warning-foreground: 40 90% 15%;
+
+    --info: 200 60% 50%;
+    --info-foreground: 0 0% 100%;
+
+    --progress-bar: 160 40% 50%;
+    --progress-track: 140 10% 90%;
+
+    --focus-ring: 200 60% 60%;
+
+    --sidebar-background: 140 15% 96%;
+    --sidebar-foreground: 200 15% 25%;
+    --sidebar-primary: 160 30% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 140 15% 92%;
+    --sidebar-accent-foreground: 200 15% 25%;
+    --sidebar-border: 140 15% 88%;
+    --sidebar-ring: 160 30% 45%;
+
+    --font-body: 'Lexend', sans-serif;
+    --font-heading: 'Inter', sans-serif;
+  }
+
+  .dark {
+    --background: 200 15% 10%;
+    --foreground: 140 10% 90%;
+
+    --card: 200 15% 13%;
+    --card-foreground: 140 10% 90%;
+
+    --popover: 200 15% 13%;
+    --popover-foreground: 140 10% 90%;
+
+    --primary: 160 35% 50%;
+    --primary-foreground: 200 15% 10%;
+
+    --secondary: 200 15% 18%;
+    --secondary-foreground: 140 10% 85%;
+
+    --muted: 200 12% 18%;
+    --muted-foreground: 200 10% 55%;
+
+    --accent: 200 15% 20%;
+    --accent-foreground: 140 10% 90%;
+
+    --destructive: 0 55% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 12% 20%;
+    --input: 200 12% 20%;
+    --ring: 160 35% 50%;
+
+    --tea-primary: 160 35% 45%;
+    --tea-surface: 160 15% 15%;
+    --tea-border: 160 12% 22%;
+
+    --tdah-primary: 35 65% 50%;
+    --tdah-surface: 35 15% 14%;
+    --tdah-border: 35 12% 22%;
+    --tdah-accent: 200 45% 45%;
+
+    --success: 145 45% 40%;
+    --warning: 40 70% 50%;
+    --info: 200 55% 45%;
+    --progress-bar: 160 35% 45%;
+    --progress-track: 200 12% 20%;
+    --focus-ring: 200 50% 50%;
+
+    --sidebar-background: 200 15% 12%;
+    --sidebar-foreground: 140 10% 88%;
+    --sidebar-primary: 160 35% 50%;
+    --sidebar-primary-foreground: 200 15% 10%;
+    --sidebar-accent: 200 12% 18%;
+    --sidebar-accent-foreground: 140 10% 88%;
+    --sidebar-border: 200 12% 20%;
+    --sidebar-ring: 160 35% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+
+  /* Accessibility: better focus styles */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--focus-ring));
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer utilities {
+  .font-body {
+    font-family: var(--font-body);
+  }
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+}
